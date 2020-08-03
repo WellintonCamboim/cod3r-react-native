@@ -4,6 +4,7 @@ import Primeiro from './components/Primeiro'
 import CompOficial, { Comp1, Comp2 } from './components/Multi'
 import MinMax from './components/MinMax'
 import Aleatorio from './components/Aleatorio'
+import Titulo from './components/Titulo'
 
 // function App() {
 //     return <Text>Primeiro Componente 2</Text>
@@ -13,11 +14,12 @@ import Aleatorio from './components/Aleatorio'
 
 export default () => (
     <View style={style.App}>
-        <Aleatorio x={50} y={40}/>
+        <Titulo principal="Cadastro do Produto" secundario="Tela de Cadastro do Produto"/>
+        {/* <Aleatorio x={50} y={40}/>
         <Aleatorio x={30} y={24}/>
         <Aleatorio x={10} y={40}/>
         <Aleatorio x={20} y={44}/>
-        <Aleatorio x={10} y={40}/>
+        <Aleatorio x={10} y={40}/> */}
         {/* <MinMax min='10' max='20' />
         <MinMax min={10} max={20} /> */}
         {/* <CompOficial />
