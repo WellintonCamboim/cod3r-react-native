@@ -6,6 +6,7 @@ import MinMax from './components/MinMax'
 import Aleatorio from './components/Aleatorio'
 import Titulo from './components/Titulo'
 import Botao from './components/Botao'
+import Contador from './components/Contador'
 
 // function App() {
 //     return <Text>Primeiro Componente 2</Text>
@@ -15,8 +16,10 @@ import Botao from './components/Botao'
 
 export default () => (
     <View style={style.App}>
-        <Botao />
+        <Contador />
+        <Contador inicial={2} passo={5}/>
         {/* <Aleatorio x={50} y={40}/>
+        <Botao />
         <Titulo principal="Cadastro do Produto" secundario="Tela de Cadastro do Produto"/>
         <Aleatorio x={30} y={24}/>
         <Aleatorio x={10} y={40}/>
