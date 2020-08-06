@@ -10,6 +10,7 @@ import Contador from './components/Contador'
 //import Pai from './components/direta/Pai'
 import Pai from './components/indireta/Pai'
 import ContadorV2 from './components/contador/ContadorV2'
+import Diferenciar from './components/Diferenciar'
 
 // function App() {
 //     return <Text>Primeiro Componente 2</Text>
@@ -19,9 +20,10 @@ import ContadorV2 from './components/contador/ContadorV2'
 
 export default () => (
     <View style={style.App}>
-        <ContadorV2 />
+        <Diferenciar />
 
         {/* <Aleatorio x={50} y={40}/>
+        <ContadorV2 />
         <Pai />
         <Pai />
         <Contador />
