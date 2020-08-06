@@ -8,10 +8,13 @@ import Titulo from './components/Titulo'
 import Botao from './components/Botao'
 import Contador from './components/Contador'
 //import Pai from './components/direta/Pai'
-import Pai from './components/indireta/Pai'
+// import Pai from './components/indireta/Pai'
 import ContadorV2 from './components/contador/ContadorV2'
 import Diferenciar from './components/Diferenciar'
 import ParImpar from './components/ParImpar'
+import Familia from './components/relacao/Familia'
+import Membro from './components/relacao/Membro'
+
 
 // function App() {
 //     return <Text>Primeiro Componente 2</Text>
@@ -21,9 +24,21 @@ import ParImpar from './components/ParImpar'
 
 export default () => (
     <SafeAreaView style={style.App}>
-        <ParImpar num={3}/>
 
+        <Familia>
+            <Membro nome="Bia" sobrenome="Aruda"/>
+            <Membro nome="Carlos" sobrenome="Fonseca"/>
+        </Familia>
+        <Familia>
+            <Membro nome="Ana" sobrenome="Silva"/>
+            <Membro nome="Betriz" sobrenome="Silva"/>
+            <Membro nome="Betriz" sobrenome="Silva"/>
+            <Membro nome="Betriz" sobrenome="Silva"/>
+            <Membro nome="Betriz" sobrenome="Silva"/>
+
+        </Familia>
         {/* <Aleatorio x={50} y={40}/>
+        <ParImpar num={3}/>
         <Diferenciar />
         <ContadorV2 />
         <Pai />
