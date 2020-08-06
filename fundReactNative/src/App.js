@@ -7,7 +7,8 @@ import Aleatorio from './components/Aleatorio'
 import Titulo from './components/Titulo'
 import Botao from './components/Botao'
 import Contador from './components/Contador'
-import Pai from './components/direta/Pai'
+//import Pai from './components/direta/Pai'
+import Pai from './components/indireta/Pai'
 
 // function App() {
 //     return <Text>Primeiro Componente 2</Text>
@@ -17,9 +18,9 @@ import Pai from './components/direta/Pai'
 
 export default () => (
     <View style={style.App}>
-        
         <Pai />
         {/* <Aleatorio x={50} y={40}/>
+        <Pai />
         <Contador />
         <Contador inicial={2} passo={5}/>
         <Botao />
