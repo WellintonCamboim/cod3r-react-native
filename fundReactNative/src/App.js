@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import { Text, View, StyleSheet, SafeAreaView } from 'react-native'
 import Primeiro from './components/Primeiro'
 import CompOficial, { Comp1, Comp2 } from './components/Multi'
 import MinMax from './components/MinMax'
@@ -11,6 +11,7 @@ import Contador from './components/Contador'
 import Pai from './components/indireta/Pai'
 import ContadorV2 from './components/contador/ContadorV2'
 import Diferenciar from './components/Diferenciar'
+import ParImpar from './components/ParImpar'
 
 // function App() {
 //     return <Text>Primeiro Componente 2</Text>
@@ -19,10 +20,11 @@ import Diferenciar from './components/Diferenciar'
 // export default() => <Text>Primeiro Componente!!!</Text>
 
 export default () => (
-    <View style={style.App}>
-        <Diferenciar />
+    <SafeAreaView style={style.App}>
+        <ParImpar num={3}/>
 
         {/* <Aleatorio x={50} y={40}/>
+        <Diferenciar />
         <ContadorV2 />
         <Pai />
         <Pai />
@@ -40,7 +42,7 @@ export default () => (
         <Comp1 />
         <Comp2 />
         <Primeiro /> */}
-    </View>
+    </SafeAreaView>
 )
 
 const style = StyleSheet.create({
