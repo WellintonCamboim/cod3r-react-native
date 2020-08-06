@@ -10,7 +10,7 @@ export default props => {
     function exibirValor(numero, texto) {
         setNum(numero)
         setTexto(texto)
-    }
+        }
     return (
         <>
             <Text style={style.fontG}>
