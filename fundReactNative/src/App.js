@@ -16,6 +16,7 @@ import Familia from './components/relacao/Familia'
 import Membro from './components/relacao/Membro'
 import UsuarioLogado from './components/UsuarioLogado'
 import ListaProdutos from './components/produtos/ListaProdutos'
+import ListaProdutosV2 from './components/produtos/ListaProdutosV2'
 
 
 // function App() {
@@ -27,10 +28,9 @@ import ListaProdutos from './components/produtos/ListaProdutos'
 export default () => (
     <SafeAreaView style={style.App}>
 
-
-        <ListaProdutos />
-
+    <ListaProdutosV2 />
         {/* <Aleatorio x={50} y={40}/>
+        <ListaProdutos />
         <UsuarioLogado usuario={{ nome: 'Wellinton', email: 'wellinton@gmail.com' }} />
         <UsuarioLogado usuario={{ nome: 'Afonso Primeiro' }} />
         <UsuarioLogado usuario={{ email: 'ana@hotmail.com' }} />
