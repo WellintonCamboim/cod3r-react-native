@@ -15,6 +15,7 @@ import ParImpar from './components/ParImpar'
 import Familia from './components/relacao/Familia'
 import Membro from './components/relacao/Membro'
 import UsuarioLogado from './components/UsuarioLogado'
+import ListaProdutos from './components/produtos/ListaProdutos'
 
 
 // function App() {
@@ -27,13 +28,13 @@ export default () => (
     <SafeAreaView style={style.App}>
 
 
+        <ListaProdutos />
+
+        {/* <Aleatorio x={50} y={40}/>
         <UsuarioLogado usuario={{ nome: 'Wellinton', email: 'wellinton@gmail.com' }} />
         <UsuarioLogado usuario={{ nome: 'Afonso Primeiro' }} />
         <UsuarioLogado usuario={{ email: 'ana@hotmail.com' }} />
         <UsuarioLogado usuario={{}} />
-
-
-        {/* <Aleatorio x={50} y={40}/>
         <Familia>
             <Membro nome="Bia" sobrenome="Aruda"/>
             <Membro nome="Carlos" sobrenome="Fonseca"/>
