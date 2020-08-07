@@ -14,6 +14,7 @@ import Diferenciar from './components/Diferenciar'
 import ParImpar from './components/ParImpar'
 import Familia from './components/relacao/Familia'
 import Membro from './components/relacao/Membro'
+import UsuarioLogado from './components/UsuarioLogado'
 
 
 // function App() {
@@ -25,6 +26,14 @@ import Membro from './components/relacao/Membro'
 export default () => (
     <SafeAreaView style={style.App}>
 
+
+        <UsuarioLogado usuario={{ nome: 'Wellinton', email: 'wellinton@gmail.com' }} />
+        <UsuarioLogado usuario={{ nome: 'Afonso Primeiro' }} />
+        <UsuarioLogado usuario={{ email: 'ana@hotmail.com' }} />
+        <UsuarioLogado usuario={{}} />
+
+
+        {/* <Aleatorio x={50} y={40}/>
         <Familia>
             <Membro nome="Bia" sobrenome="Aruda"/>
             <Membro nome="Carlos" sobrenome="Fonseca"/>
@@ -35,9 +44,7 @@ export default () => (
             <Membro nome="Betriz" sobrenome="Silva"/>
             <Membro nome="Betriz" sobrenome="Silva"/>
             <Membro nome="Betriz" sobrenome="Silva"/>
-
         </Familia>
-        {/* <Aleatorio x={50} y={40}/>
         <ParImpar num={3}/>
         <Diferenciar />
         <ContadorV2 />
