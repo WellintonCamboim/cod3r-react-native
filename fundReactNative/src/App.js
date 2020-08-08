@@ -19,6 +19,7 @@ import ListaProdutos from './components/produtos/ListaProdutos'
 import ListaProdutosV2 from './components/produtos/ListaProdutosV2'
 import DigiteSeuNome from './components/DigiteSeuNome'
 import Quadrado from './components/layout/Quadrado'
+import FlexboxV1 from './components/layout/FlexboxV1'
 
 
 // function App() {
@@ -30,10 +31,9 @@ import Quadrado from './components/layout/Quadrado'
 export default () => (
     <SafeAreaView style={style.App}>
 
-        <Quadrado />
-        <Quadrado color="red"/>
-        <Quadrado color="blue"/>
 
+
+        <FlexboxV1 />
 
         {/* <Aleatorio x={50} y={40}/>
         <DigiteSeuNome />
