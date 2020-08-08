@@ -18,6 +18,7 @@ import UsuarioLogado from './components/UsuarioLogado'
 import ListaProdutos from './components/produtos/ListaProdutos'
 import ListaProdutosV2 from './components/produtos/ListaProdutosV2'
 import DigiteSeuNome from './components/DigiteSeuNome'
+import Quadrado from './components/layout/Quadrado'
 
 
 // function App() {
@@ -29,10 +30,13 @@ import DigiteSeuNome from './components/DigiteSeuNome'
 export default () => (
     <SafeAreaView style={style.App}>
 
+        <Quadrado />
+        <Quadrado color="red"/>
+        <Quadrado color="blue"/>
 
-        <DigiteSeuNome />
 
         {/* <Aleatorio x={50} y={40}/>
+        <DigiteSeuNome />
         <ListaProdutosV2 />
         <ListaProdutos />
         <UsuarioLogado usuario={{ nome: 'Wellinton', email: 'wellinton@gmail.com' }} />
