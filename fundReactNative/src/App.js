@@ -35,7 +35,7 @@ import Mega from './components/mega/Mega'
 export default () => (
     <SafeAreaView style={style.App}>
 
-        <Mega />
+        <Mega qtdeNumeros={7}/>
 
         {/* <Aleatorio x={50} y={40}/>
         <FlexboxV4 />
