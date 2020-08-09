@@ -21,6 +21,7 @@ import DigiteSeuNome from './components/DigiteSeuNome'
 import Quadrado from './components/layout/Quadrado'
 import FlexboxV1 from './components/layout/FlexboxV1'
 import FlexboxV2 from './components/layout/FlexboxV2'
+import FlexboxV3 from './components/layout/FlexboxV3'
 
 
 // function App() {
@@ -32,10 +33,10 @@ import FlexboxV2 from './components/layout/FlexboxV2'
 export default () => (
     <SafeAreaView style={style.App}>
 
-
-        <FlexboxV2 />
+        <FlexboxV3 />
 
         {/* <Aleatorio x={50} y={40}/>
+        <FlexboxV2 />
         <FlexboxV1 />
         <DigiteSeuNome />
         <ListaProdutosV2 />
