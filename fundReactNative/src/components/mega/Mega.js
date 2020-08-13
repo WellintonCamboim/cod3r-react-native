@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
-import { Text, TextInput, Button } from 'react-native'
+import { Text, TextInput, Button, View } from 'react-native'
 import Style from '../style'
+import MegaNumero from '../mega/MegaNumero'
 
 export default class Mega extends Component {
 
@@ -38,25 +39,32 @@ export default class Mega extends Component {
         return nums.includes(novo) ? this.gerarNumeroNaoContido(nums) : novo
     }
 
+    gerarNumeros = () => {
+        const numeros = Array(this.state.qtdeNumeros).fill().reduce(
+            nums => [...nums, this.gerarNumeroNaoContido(nums)], [])
+            .sort((a, b) => a - b)
+        this.setState({ numeros })
+    }
+
+    // Segunda forma de gerarNumeros
     // gerarNumeros = () => {
-    //     const numeros = Array(this.state.qtdeNumeros).fill().reduce(
-    //         nums => [...nums, this.gerarNumeroNaoContido(nums)], [])
-    //         .sort((a, b) => a - b)
+    //     const { qtdeNumeros } = this.state
+    //     console.warn(qtdeNumeros)
+    //     const numeros = []
+
+    //     for (let i = 0; i < qtdeNumeros; i++) {
+    //         const n = this.gerarNumeroNaoContido(numeros)
+    //         numeros.push(n)
+    //     }
+    //     numeros.sort((a, b) => a - b)
     //     this.setState({ numeros })
     // }
 
-    // Segunda forma de gerarNumeros
-    gerarNumeros = () => {
-        const { qtdeNumeros } = this.state
-        console.warn(qtdeNumeros)
-        const numeros = []
-
-        for (let i = 0; i < qtdeNumeros; i++) {
-            const n = this.gerarNumeroNaoContido(numeros)
-            numeros.push(n)
-        }
-        numeros.sort((a, b) => a - b)
-        this.setState({ numeros })
+    exibirNumeros = () => {
+        const nums = this.state.numeros
+        return nums.map(num => {
+            return <MegaNumero key={num} num={num} />
+        })
     }
 
     render() {
@@ -76,9 +84,15 @@ export default class Mega extends Component {
                     onChangeText={this.alterarQtNumero}
                 />
                 <Button title='Gerar' onPress={this.gerarNumeros} />
-                <Text>
-                    {this.state.numeros.join(',')}
-                </Text>
+                <View style={{
+                    marginTop: 20,
+
+                    flexDirection: "row",
+                    flexWrap: "wrap",
+                    justifyContent: "center",
+                }}>
+                    {this.exibirNumeros()}
+                </View>
             </Fragment>
 
         )
