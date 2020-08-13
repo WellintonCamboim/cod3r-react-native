@@ -38,10 +38,24 @@ export default class Mega extends Component {
         return nums.includes(novo) ? this.gerarNumeroNaoContido(nums) : novo
     }
 
+    // gerarNumeros = () => {
+    //     const numeros = Array(this.state.qtdeNumeros).fill().reduce(
+    //         nums => [...nums, this.gerarNumeroNaoContido(nums)], [])
+    //         .sort((a, b) => a - b)
+    //     this.setState({ numeros })
+    // }
+
+    // Segunda forma de gerarNumeros
     gerarNumeros = () => {
-        const numeros = Array(this.state.qtdeNumeros).fill().reduce(
-            nums => [...nums, this.gerarNumeroNaoContido(nums)], [])
-            .sort((a, b) => a - b)
+        const { qtdeNumeros } = this.state
+        console.warn(qtdeNumeros)
+        const numeros = []
+
+        for (let i = 0; i < qtdeNumeros; i++) {
+            const n = this.gerarNumeroNaoContido(numeros)
+            numeros.push(n)
+        }
+        numeros.sort((a, b) => a - b)
         this.setState({ numeros })
     }
 
@@ -62,7 +76,7 @@ export default class Mega extends Component {
                     onChangeText={this.alterarQtNumero}
                 />
                 <Button title='Gerar' onPress={this.gerarNumeros} />
-                <Text>                
+                <Text>
                     {this.state.numeros.join(',')}
                 </Text>
             </Fragment>
